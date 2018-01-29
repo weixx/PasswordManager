@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">密码管家</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
+    <string name="title_activity_add_account">添加账号信息</string>
+    <string name="title_activity_backups">备份数据</string>
+    <string name="large_text">
+        "备份账号数据\n\n"
+        "该数据备份的过程如下:\n"
+        "1、获取APP当前您所存储的所有账号信息\n"
+        "2、使用您的密码对说有数据进行加密处理\n"
+        "3、将加密后的字符复制到粘贴板\n\n"
+        "之后您可以将复制好的字符存储到任何地方，尽量不要存放于网络中\n"
+        "请您一定要牢记您的密码，这个密码是您取回所有数据的唯一凭证，只有您自己知道，如果您觉得自己容易忘，可以将密码告知您信任过的人，"
+        "再三强调，请切记，即使我们也不知道您的这个密码\n\n"
+        "你复制走的这段加密字符可以用来在本APP首页左滑菜单中导入并读取，导入时需要您核对这段字符的密码，"
+        "这段字符的密码可以不和需要导入时当时APP所使用的密码相同\n\n"
+        "点击右侧圆形按钮进行复制"
+    </string>
+</resources>
