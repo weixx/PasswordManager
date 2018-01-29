@@ -9,7 +9,7 @@
     <item name="masked" type="id" />
     <string name="title_activity_add_account">添加账号信息</string>
     <string name="title_activity_backups">备份数据</string>
-    <string name="large_text">
+    <string name="hint_backups_data">
         "备份账号数据\n\n"
         "该数据备份的过程如下:\n"
         "1、获取APP当前您所存储的所有账号信息\n"
@@ -21,5 +21,18 @@
         "你复制走的这段加密字符可以用来在本APP首页左滑菜单中导入并读取，导入时需要您核对这段字符的密码，"
         "这段字符的密码可以不和需要导入时当时APP所使用的密码相同\n\n"
         "点击右侧圆形按钮进行复制"
+    </string>
+    <string name="title_activity_import">导入数据</string>
+    <string name="hint_import_data">
+        "导入账号数据\n\n"
+        "操作步骤:\n"
+        "1、复制您之前备份的那段字符\n"
+        "2、到此页面输入需要导入的数据的加密密码\n"
+        "3、点击确定\n\n"
+        "根据提示操作即可\n"
+        "如果验证失败，请检查您复制的加密字符是否带有换行、空格"
+        "验证失败需要重新再次复制，每验证一次需要重新复制一次\n\n"
+        "这个验证密码是您上次备份时当时APP所使用的密码，并不是当前APP使用的密码\n\n"
+        "导入成功以后在首页即可查看数据详细信息\n\n"
     </string>
 </resources>

@@ -35,6 +35,10 @@
         <activity
             android:name=".ui.BackupsActivity"
             android:label="@string/title_activity_backups"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.ImportActivity"
+            android:label="@string/title_activity_import"
             android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
