@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
         btnPassword_Login.onClick {
             val password = etPassword_Login.text.trim().toString()
             if (password.isEmpty()){
-                showToast("请输入密码")
+                etPassword_Login.error = "请输入密码"
                 return@onClick
             }
             MyApplication.password = password
@@ -32,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
                 finish()
             } catch(e: Exception) {
                 if (e is SQLiteException) {
-                    showToast("密码错误")
+                    etPassword_Login.error = "密码错误"
                 } else {
                     showToast(e.message!!)
                 }

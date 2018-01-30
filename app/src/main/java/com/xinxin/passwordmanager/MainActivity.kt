@@ -18,12 +18,10 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.SearchView
-import com.google.gson.Gson
 import com.xinxin.passwordmanager.adapter.MainListAdapter
-import com.xinxin.passwordmanager.bean.AccountInfoBean
-import com.xinxin.passwordmanager.repository.db.DataEntity
 import com.xinxin.passwordmanager.repository.db.DataEntityDao
 import com.xinxin.passwordmanager.ui.BackupsActivity
+import com.xinxin.passwordmanager.ui.ImportActivity
 import com.xinxin.passwordmanager.ui.add.AddAccountActivity
 
 
@@ -78,12 +76,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onResume()
         val list = MyApplication.instance.getDaoSession().dataEntityDao.queryBuilder().list()
         mainListAdapter.setData(list)
-        val put = HashMap<String, List<DataEntity>>()
-        put.put("data", list)
-        val toJson = Gson().toJson(put)
-//        Log.e("TAG",toJson)
-        val fromJson = Gson().fromJson(toJson, AccountInfoBean::class.java)
-//        Log.e("TAG",fromJson.data.toString())
     }
 
 
@@ -91,8 +83,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val popupMenu = PopupMenu(this, view)
         popupMenu.menuInflater.inflate(R.menu.item_menu, popupMenu.menu)
         popupMenu.setOnMenuItemClickListener {
-            mainListAdapter.removeItem(position)
             MyApplication.instance.getDaoSession().dataEntityDao.deleteByKey(mainListAdapter.getItemId(position))
+            mainListAdapter.removeItem(position)
             false
         }
         popupMenu.setOnDismissListener {
@@ -171,11 +163,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         if (id == R.id.nav_camera) {
-
+            startActivity(Intent(this@MainActivity,ImportActivity::class.java))
         } else if (id == R.id.nav_gallery) {
             startActivity(Intent(this@MainActivity,BackupsActivity::class.java))
         } else if (id == R.id.nav_slideshow) {
-
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {

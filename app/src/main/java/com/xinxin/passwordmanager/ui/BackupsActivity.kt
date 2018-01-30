@@ -5,20 +5,19 @@ import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
 import android.view.MenuItem
 import com.google.gson.Gson
 import com.xinxin.passwordmanager.MyApplication
 import com.xinxin.passwordmanager.R
 import com.xinxin.passwordmanager.repository.db.DataEntity
 import com.xinxin.passwordmanager.utils.AESOperator
+import kotlinx.android.synthetic.main.layout_app_bar.*
 
 class BackupsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_backups)
-        val toolbar = findViewById(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
