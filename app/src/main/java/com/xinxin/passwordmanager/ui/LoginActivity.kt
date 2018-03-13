@@ -46,7 +46,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun checkFingerprint() {
-        FingerprintUtil.callFingerPrint(object : FingerprintUtil.OnCallBackListenr {
+        FingerprintUtil.callFingerPrint(object : FingerprintUtil.OnCallBackListener {
             override fun onSupportFailed() {
                 showToast("当前设备不支持指纹")
                 showSetPassword()

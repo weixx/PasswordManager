@@ -18,7 +18,7 @@ import com.xinxin.passwordmanager.MyApplication
 object FingerprintUtil {
     var cancellationSignal: CancellationSignal? = null
 
-    fun callFingerPrint(listener: OnCallBackListenr?) {
+    fun callFingerPrint(listener: OnCallBackListener?) {
         val managerCompat = FingerprintManagerCompat.from(MyApplication.mContext)
         if (!managerCompat.isHardwareDetected) { //判断设备是否支持
             listener?.onSupportFailed()
@@ -59,7 +59,7 @@ object FingerprintUtil {
 
     }
 
-    interface OnCallBackListenr {
+    interface OnCallBackListener {
         fun onSupportFailed()
         fun onInsecurity()
         fun onEnrollFailed()
