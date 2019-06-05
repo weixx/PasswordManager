@@ -34,23 +34,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val toolbar = findViewById(R.id.toolbar) as Toolbar
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        val fabAdd = findViewById(R.id.fabAdd_main) as FloatingActionButton
+        val fabAdd = findViewById<FloatingActionButton>(R.id.fabAdd_main)
         fabAdd.setOnClickListener { startActivity(Intent(this@MainActivity,AddAccountActivity::class.java))}
 
-        val drawer = findViewById(R.id.drawer_layout) as DrawerLayout
+        val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
         val toggle = ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer.setDrawerListener(toggle)
         toggle.syncState()
 
-        val navigationView = findViewById(R.id.nav_view) as NavigationView
+        val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
 
 
-        recyclerView = findViewById(R.id.rv_main) as RecyclerView
+        recyclerView = findViewById(R.id.rv_main)
         recyclerView.layoutManager = GridLayoutManager(this, 2)
         mainListAdapter = MainListAdapter()
         recyclerView.adapter = mainListAdapter

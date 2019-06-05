@@ -57,11 +57,11 @@ class MainListAdapter : RecyclerView.Adapter<MainListAdapter.MyViewHolder>() {
         }
 
         override fun onClick(view: View) {
-            onItemClickListener?.onItemClick(view, position)
+            onItemClickListener?.onItemClick(view, layoutPosition)
         }
 
         override fun onLongClick(view: View): Boolean {
-            onItemLongClickListener?.onItemLongClick(view, position)
+            onItemLongClickListener?.onItemLongClick(view, layoutPosition)
             return true
         }
     }

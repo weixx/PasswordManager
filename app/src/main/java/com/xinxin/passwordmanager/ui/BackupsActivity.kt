@@ -26,7 +26,7 @@ class BackupsActivity : AppCompatActivity() {
             Snackbar.make(view, "复制成功，请妥善保管", Snackbar.LENGTH_LONG).show()
             val list = MyApplication.instance.getDaoSession().dataEntityDao.queryBuilder().list()
             val put = HashMap<String, List<DataEntity>>()
-            put.put("data", list)
+            put["data"] = list
             val toJson = Gson().toJson(put)
             val cm = getSystemService(Context.CLIPBOARD_SERVICE) as android.content.ClipboardManager
             cm.text = AESOperator.getInstance().setPassword().encrypt(toJson)
