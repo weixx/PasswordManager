@@ -4,16 +4,16 @@ import android.content.Context
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.google.gson.Gson
 import com.xinxin.passwordmanager.MyApplication
 import com.xinxin.passwordmanager.R
 import com.xinxin.passwordmanager.repository.db.DataEntity
+import com.xinxin.passwordmanager.ui.base.BaseActivity
 import com.xinxin.passwordmanager.utils.AESOperator
 import kotlinx.android.synthetic.main.layout_app_bar.*
 
-class BackupsActivity : AppCompatActivity() {
+class BackupsActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -16,15 +16,15 @@ class UpgradeHelper(context: Context, name: String, factory: SQLiteDatabase.Curs
         Log.e("TAG","数据库升级 >> $oldVersion,$newVersion")
         when (newVersion) {
             4 -> {
-                //                //不能先删除表，否则数据都木了  StudentDao.dropTable(db, true);
-                //                DaoMaster.createAllTables(db, true);
-                //                // 加入新字段
-                //                try {
-                //                    db.execSQL("ALTER TABLE 'USER' ADD 'NICK_NAME' TEXT;");
-                //                } catch (SQLException e) {
-                //                    e.printStackTrace();
-                //                    Log.e("TAG",e.getMessage());
-                //                }
+//                //不能先删除表，否则数据都木了  StudentDao.dropTable(db, true);
+//                DaoMaster.createAllTables(db, true);
+//                // 加入新字段
+//                try {
+//                    db.execSQL("ALTER TABLE 'USER' ADD 'NICK_NAME' TEXT;");
+//                } catch (SQLException e) {
+//                    e.printStackTrace();
+//                    Log.e("TAG",e.getMessage());
+//                }
             }
         }
     }
