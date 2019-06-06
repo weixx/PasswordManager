@@ -8,7 +8,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#FFFFFF"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context="com.xinxin.passwordmanager.ui.LoginActivity">
     <LinearLayout
         android:id="@+id/llVerificationFingerprint_Login"
@@ -20,7 +22,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="请验证指纹"
+            android:text="@string/please_verify_fingerprint"
             android:textSize="@dimen/x35"
             android:textColor="#323232"
             android:layout_gravity="center_horizontal"/>
@@ -28,7 +30,7 @@
             android:layout_marginTop="@dimen/y20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="按住Home键以验证指纹"
+            android:text="@string/verify_fingerprint"
             android:textSize="@dimen/x25"
             android:textColor="#969696"
             android:layout_gravity="center_horizontal"/>
@@ -59,7 +61,7 @@
                     android:textSize="@dimen/x29"
                     android:textColor="#323232"
                     android:textColorHint="#969696"
-                    android:hint="请输入密码，首次为设置，尽量复杂且牢记"/>
+                    android:hint="@string/please_enter_password"/>
             </android.support.design.widget.TextInputLayout>
             <Button
                 android:id="@+id/btnPassword_Login"
@@ -69,7 +71,7 @@
                 android:textSize="@dimen/x35"
                 android:background="@color/colorPrimary"
                 android:textColor="#FFFFFF"
-                android:text="确认"/>
+                android:text="@string/confirm"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

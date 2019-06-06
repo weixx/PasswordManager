@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.xinxin.passwordmanager.R
-import com.xinxin.passwordmanager.repository.db.DataEntity
+import com.xinxin.passwordmanager.repository.db.entity.DataEntity
 import java.util.*
 
 /**
@@ -96,7 +96,7 @@ class MainListAdapter : RecyclerView.Adapter<MainListAdapter.MyViewHolder>() {
     override fun getItemId(position: Int): Long {
         return list[position].id
     }
-    fun getItem(position:Int):DataEntity{
+    fun getItem(position:Int): DataEntity {
         return list[position]
     }
 }

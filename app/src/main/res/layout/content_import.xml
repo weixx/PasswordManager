@@ -12,36 +12,40 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
             android:text="@string/hint_import_data" />
+
         <android.support.design.widget.TextInputLayout
-            android:layout_marginLeft="@dimen/x30"
-            android:layout_marginRight="@dimen/x30"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginRight="@dimen/x30">
+
             <EditText
                 android:id="@+id/etPassword_Import"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textSize="@dimen/x29"
+                android:hint="请输入密码"
                 android:textColor="#323232"
                 android:textColorHint="#969696"
-                android:hint="请输入密码"/>
+                android:textSize="@dimen/x29" />
         </android.support.design.widget.TextInputLayout>
+
         <Button
             android:id="@+id/btnPassword_Import"
-            android:layout_marginTop="@dimen/y50"
             android:layout_width="match_parent"
             android:layout_height="@dimen/y90"
-            android:textSize="@dimen/x35"
+            android:layout_marginBottom="@dimen/y50"
             android:layout_marginLeft="@dimen/x30"
             android:layout_marginRight="@dimen/x30"
-            android:layout_marginBottom="@dimen/y50"
+            android:layout_marginTop="@dimen/y50"
             android:background="@color/colorPrimary"
+            android:text="确认"
             android:textColor="#FFFFFF"
-            android:text="确认"/>
+            android:textSize="@dimen/x35" />
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

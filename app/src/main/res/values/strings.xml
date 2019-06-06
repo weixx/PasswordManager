@@ -8,9 +8,9 @@
     <item name="visible" type="id" />
     <item name="masked" type="id" />
     <string name="title_activity_add_account">添加账号信息</string>
-    <string name="title_activity_backups">备份数据</string>
+    <string name="title_activity_export">导出数据</string>
     <string name="hint_backups_data">
-        "备份账号数据\n\n"
+        "导出账号数据\n\n"
         "该数据备份的过程如下:\n"
         "1、获取APP当前您所存储的所有账号信息\n"
         "2、使用您的密码对所有数据进行加密处理\n"
@@ -19,7 +19,7 @@
         "请您一定要牢记您的密码，这个密码是您取回所有数据的唯一凭证，只有您自己知道，如果您觉得自己容易忘，可以将密码告知您信任过的人，"
         "再三强调，请切记！！！\n\n"
         "你复制走的这段加密字符可以用来在本APP首页左滑菜单中导入并读取，导入时需要您核对这段字符的密码，"
-        "这段字符的密码可以不和需要导入时当时APP所使用的密码相同\n\n"
+        "这段字符的密码可以和需要导入时当时APP所使用的密码不相同\n\n"
         "点击右侧圆形按钮进行复制"
     </string>
     <string name="title_activity_import">导入数据</string>
@@ -32,7 +32,16 @@
         "根据提示操作即可\n"
         "如果验证失败，请检查您复制的加密字符是否带有换行、空格\n"
         "验证失败需要重新再次复制，每验证一次需要重新复制一次\n\n"
-        "这个验证密码是您上次备份时当时APP所使用的密码，并不是当前APP使用的密码\n\n"
+        "这个验证密码是您上次导出时当时APP所使用的密码，并不是当前APP使用的密码\n\n"
         "导入成功以后在首页即可查看数据详细信息\n\n"
     </string>
+    <string name="click_two_quit">连续按两次退出</string>
+    <string name="please_enter_password">请输入密码，首次为设置，尽量复杂且牢记</string>
+    <string name="confirm">确认</string>
+    <string name="verify_fingerprint">按住Home键以验证指纹</string>
+    <string name="please_verify_fingerprint">请验证指纹</string>
+    <string name="password_wrong">密码错误</string>
+    <string name="please_enter_password2">请输入密码</string>
+    <string name="action_update">修改</string>
+    <string name="password_length_short">密码不可少于10位，该密码非常重要，请谨慎！</string>
 </resources>

@@ -8,20 +8,23 @@ import android.view.MenuItem
 import com.google.gson.Gson
 import com.xinxin.passwordmanager.MyApplication
 import com.xinxin.passwordmanager.R
-import com.xinxin.passwordmanager.repository.db.DataEntity
+import com.xinxin.passwordmanager.repository.db.entity.DataEntity
 import com.xinxin.passwordmanager.ui.base.BaseActivity
 import com.xinxin.passwordmanager.utils.AESOperator
 import kotlinx.android.synthetic.main.layout_app_bar.*
 
-class BackupsActivity : BaseActivity() {
+/**
+ * 导出数据
+ */
+class ExportActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_backups)
+        setContentView(R.layout.activity_export)
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
-        val fab = findViewById(R.id.fab) as FloatingActionButton
+        val fab = findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener { view ->
             Snackbar.make(view, "复制成功，请妥善保管", Snackbar.LENGTH_LONG).show()
             val list = MyApplication.instance.getDaoSession().dataEntityDao.queryBuilder().list()

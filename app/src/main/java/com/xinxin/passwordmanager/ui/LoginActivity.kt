@@ -4,17 +4,17 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v4.hardware.fingerprint.FingerprintManagerCompat
-import android.support.v7.app.AppCompatActivity
 import android.view.View
 import com.xinxin.passwordmanager.MainActivity
 import com.xinxin.passwordmanager.MyApplication
 import com.xinxin.passwordmanager.R
+import com.xinxin.passwordmanager.ui.base.BaseActivity
 import com.xinxin.passwordmanager.utils.FingerprintUtil
 import kotlinx.android.synthetic.main.activity_login.*
 import net.sqlcipher.database.SQLiteException
 import org.jetbrains.anko.onClick
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +22,11 @@ class LoginActivity : AppCompatActivity() {
         btnPassword_Login.onClick {
             val password = etPassword_Login.text.trim().toString()
             if (password.isEmpty()){
-                etPassword_Login.error = "请输入密码"
+                etPassword_Login.error = getString(R.string.please_enter_password2)
+                return@onClick
+            }
+            if (password.length<10){
+                etPassword_Login.error = getString(R.string.password_length_short)
                 return@onClick
             }
             MyApplication.password = password
@@ -32,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
                 finish()
             } catch(e: Exception) {
                 if (e is SQLiteException) {
-                    etPassword_Login.error = "密码错误"
+                    etPassword_Login.error = getString(R.string.password_wrong)
                 } else {
                     showToast(e.message!!)
                 }

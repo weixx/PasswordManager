@@ -16,14 +16,12 @@ private constructor() {
      * @param value
      */
     fun save(key: String, value: Any) {
-        if (value is String) {
-            sp!!.edit().putString(key, value).apply()
-        } else if (value is Int) {
-            sp!!.edit().putInt(key, value).apply()
-        } else if (value is Boolean) {
-            sp!!.edit().putBoolean(key, value).apply()
+        when (value) {
+            is String -> sp!!.edit().putString(key, value).apply()
+            is Int -> sp!!.edit().putInt(key, value).apply()
+            is Boolean -> sp!!.edit().putBoolean(key, value).apply()
         }
-        valueCache!!.put(key, value)
+        valueCache!![key] = value
     }
 
     /**

@@ -2,13 +2,13 @@ package com.xinxin.passwordmanager.ui
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.MenuItem
 import com.google.gson.Gson
 import com.xinxin.passwordmanager.MyApplication
 import com.xinxin.passwordmanager.R
 import com.xinxin.passwordmanager.bean.AccountInfoBean
+import com.xinxin.passwordmanager.ui.base.BaseActivity
 import com.xinxin.passwordmanager.utils.AESOperator
 import kotlinx.android.synthetic.main.content_import.*
 import kotlinx.android.synthetic.main.layout_app_bar.*
@@ -17,7 +17,7 @@ import org.jetbrains.anko.onClick
 /**
  * 导入数据
  */
-class ImportActivity : AppCompatActivity(){
+class ImportActivity : BaseActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_import)

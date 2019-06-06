@@ -1,6 +1,6 @@
 package com.xinxin.passwordmanager.bean
 
-import com.xinxin.passwordmanager.repository.db.DataEntity
+import com.xinxin.passwordmanager.repository.db.entity.DataEntity
 
 /**
  * Created by 魏欣欣 on 2018/1/24  0024.

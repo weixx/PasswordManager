@@ -2,9 +2,9 @@ package com.xinxin.passwordmanager
 
 import android.app.Application
 import android.content.Context
-import com.xinxin.passwordmanager.repository.db.DaoMaster
-import com.xinxin.passwordmanager.repository.db.DaoSession
-import com.xinxin.passwordmanager.repository.db.greendao.UpgradeHelper
+import com.xinxin.passwordmanager.repository.db.UpgradeHelper
+import com.xinxin.passwordmanager.repository.db.entity.DaoMaster
+import com.xinxin.passwordmanager.repository.db.entity.DaoSession
 
 /**
  * Created by 魏欣欣 on 2018/1/15  0015.

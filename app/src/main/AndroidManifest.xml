@@ -18,7 +18,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.add.AddAccountActivity"
             android:label="@string/title_activity_add_account"
@@ -33,13 +33,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.BackupsActivity"
-            android:label="@string/title_activity_backups"
+            android:name=".ui.ExportActivity"
+            android:label="@string/title_activity_export"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.ImportActivity"
             android:label="@string/title_activity_import"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

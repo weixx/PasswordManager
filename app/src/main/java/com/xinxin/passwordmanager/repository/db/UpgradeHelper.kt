@@ -1,9 +1,9 @@
-package com.xinxin.passwordmanager.repository.db.greendao
+package com.xinxin.passwordmanager.repository.db
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.util.Log
-import com.xinxin.passwordmanager.repository.db.DaoMaster
+import com.xinxin.passwordmanager.repository.db.entity.DaoMaster
 import org.greenrobot.greendao.database.Database
 
 /**
