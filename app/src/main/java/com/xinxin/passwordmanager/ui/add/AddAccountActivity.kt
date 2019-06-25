@@ -54,6 +54,7 @@ class AddAccountActivity : BaseActivity() {
                 MyApplication.instance.getDaoSession().dataEntityDao.update(dataEntity)
                 Snackbar.make(currentFocus, "修改成功", Snackbar.LENGTH_SHORT).show()
             }
+            setEnable(false)
         }
     }
 
